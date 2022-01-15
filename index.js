@@ -3,14 +3,14 @@
 const http = require('http');
 // fsモジュールを読み込み
 const fs = require('fs');
-// /urlモジュールを読み込み
-const url = require('url')
+// urlモジュールを読み込み
+const url = require('url');
 
 
 // ルーティングのためにそれぞれのページを読み込み
 const coffeePage = fs.readFileSync('./html/top.html', 'utf-8');
 const thanksPage = fs.readFileSync('./html/end.html', 'utf-8');
-
+const styleOrderCss = fs.readFileSync('./html/css/style_order.css', 'utf-8');
 // ※URL直書きで行けるか確認 ← ※※
 
 // ※クリエイトサーバ→ルート// えってぃんぐで出来るか？
@@ -31,13 +31,19 @@ const server = http.createServer((req, res) => {
         res.write(coffeePage);
         res.end()
         break;
+
+      case '/css/style_order.css':
+        res.writeHead(200, {'Content-Type': 'text/css'});
+        res.write(styleOrderCss);
+        res.end();
+        break;
     }
 
     switch (req.method) {
       case 'GET':
         // createReadStream()関数 を利用してレスポンスを取得
         const fs = require('fs');
-        const rs = fs.createReadStream('./html/form.html')
+        const rs = fs.createReadStream('./html/order_pl_ame.html')
         rs.pipe(res);
         break;
 
