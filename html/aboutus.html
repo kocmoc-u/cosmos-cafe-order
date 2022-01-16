@@ -1,0 +1,65 @@
+<!--cosmos cafe menu_v2.0 = 20210516 HTML・CSS応用を終えて再度挑戦-->
+<!--一度サーバーサイドを切り離してページはページで完成させる = v2.2とする-->
+<!-- └ kocmoc-u/cosmos_cafe 内に見せるようとして作る = kocmoc_kafeは残し -->
+<!-- cosmos_cafe_menu としてファイル名変更(v.は付けない)-->
+<!-- タブの動作を直す 直す前のファイルは元として保存済み -->
+<!-- タブが生きない(popupのhrefが駄目？！)なので各タブを別ページで -->
+<!-- demoページとして 折角なので ./docs に格納してみる-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>cosmos-cafe-menu-tea</title>
+
+  <meta name="description" content="ページの内容の説明を記述する箇所。100文字程度いけます。">
+  <meta name="format-derection" conrent="email=no,telephone=no,adress=no">
+  <link rel="shortcut icon" href="./img/152px.png">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="tabs">
+    <input id="coffee" type="radio" name="tab_item">
+    <a href="./index.html" class="tab_item rod text_tab_rod" for="coffee">COFFEE</a>
+
+    <input id="tea" type="radio" name="tab_item">
+    <a href="./tea.html" class="tab_item ds_eraser_cyr" for="tea">TEA</a>
+
+    <input id="design" type="radio" name="tab_item" checked>
+    <label class="tab_item mplus" for="design">ABOUT US</label>
+
+   <!-- about us タブ -->
+   <div class="design_content" id="design_content">
+    <div class="design_content_description">
+      <!-- イメージの読み込み -->
+      <div class="header">
+        <!--VIDEOテスト-->
+    <video src="./mp4/新PV_3.3Mbps.mp4"  loop autoplay muted playsinline></video>
+    <div class="text0">コーヒーいれて<br>好きなひととき<br>もっと楽しく<br>過ごしたい</div>
+
+      <div class="footer">
+        <p class="text3 text_footer3">
+          <br>
+          COSMOS CAFE<br>
+          INSTAGRAM : <a href="https://www.instagram.com/kocmoc_kafe/" target="_blank">KOCMOC_CAFE</a><br>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- ↑ about us タブ ここで終わり -->
+</div>
+  <!-- IE Edge でレスポンシブに対応させる .js -->
+  <script src="js/ofi.js"></script>
+  <script>
+    objectFitImages();
+  </script>
+
+</body>
+
+</html>

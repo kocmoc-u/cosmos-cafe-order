@@ -1,3 +1,556 @@
-h1 {
-  color: red;
+/* kocmoc_kafe_v2.0 */
+/* ディスプレイサイズをMAX1080pxとして作ってみる*/
+@font-face {
+  font-family: "RodchenkoCTT";
+  src:url("./font/RodchenkoCTT.eot"),
+      url("./font/RodchenkoCTT.woff") format("woff"),
+      url("./font/RodchenkoCTT.ttf") format("truetype"),
+      url("./font/RodchenkoCTT.svg") format("svg");
+}
+
+@font-face {
+  font-family: "DSEraserCyr";
+  src:url("./font/DS Eraser Cyr.eot"),
+      url("./font/DS Eraser Cyr.woff") format("woff"),
+      url("./font/DS Eraser Cyr.ttf") format("truetype"),
+      url("./font/DS Eraser Cyr.svg") format("svg");
+}
+
+@font-face {
+font-family: "MPLUS1p-Regular";
+src:url("./font/RodchenkoCTT.eot"),
+    url("./font/MPLUS1p-Regular.woff") format("woff"),
+    url("./font/MPLUS1p-Regular.ttf") format("truetype"),
+    url("./font/MPLUS1p-Regular.svg") format("svg");
+}
+
+/* 全体設定 */
+* {
+box-sizing: border-box;
+border-style: none;
+/* 横幅の上限を設定*/
+max-width: 1080px;
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  background-color: #fff;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+  width: 100%;;
+  margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/3);
+  height: 50px;
+  border-bottom: 3px solid #ffda00;
+  background-color: #c9c9c9;
+  line-height: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: #444444;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.tab_item:hover {
+  opacity: 1;
+  background-color: #c7243a;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 0px 0px 0px;
+  clear: both;
+  overflow: hidden;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#coffee:checked ~ #coffee_content,
+#tea:checked ~ #tea_content,
+#design:checked ~ #design_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #ffda00;
+  color: #fff;
+}
+
+/*文字スタイルをそれぞれ指定*/
+.rod {
+  font-family: "RodchenkoCTT";
+  font-size: 22pt;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
+
+.ds_eraser_cyr {
+    font-family: "DSEraserCyr";
+    font-size: 20pt;
+    letter-spacing: 0.14em;
+    line-height: 1.8;
+}
+
+.mplus{
+  font-family: "MPLUS1p-Regular";
+  font-size: 14pt;
+  letter-spacing: 0.08em;
+  line-height: 2.6;
+}
+
+/* ページ外側の色 */
+body{
+  background-color:#fff;
+}
+
+.header {
+  height: 350px;
+  background-color:white;
+}
+
+/* トップにimgを配する記述 */
+.topimage_coffee {
+  width: 100%;
+  height: 350px;
+  background: url("../img/coffee_top.png");
+  background-size: cover;
+  background-position: left;
+}
+
+.topimage_tea {
+  width: 100%;
+  height: 350px;
+  background: url("../img/tea_top.png") no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.footer {
+  height: 120px;
+  background: #ffda00;
+  color: #fff;
+  clear: both;
+}
+
+.main{
+  width: 100%;
+  color: white;
+  font-size: 0;
+}
+
+.komado {
+  width: 360px;
+  height: 400px;
+  background-color: #fff;
+  color: #fff;
+  float: left;
+  display: block;
+}
+
+.text0 {
+  width: 300px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  margin: 5px;
+  margin-left: 60px;
+ /* margin-top: 10px;
+  margin-left: 30px;　*/
+  font-family: 'メイリオ','ヒラギノ角ゴ ProN W3','YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ＭＳ ゴシック',sans-serif;;
+  font-size: 12pt;
+  line-height: 24px;
+}
+
+.text1 {
+  width: 100%;
+  color: black;
+  background-color: #fff;
+  text-align: center;
+  font-family: "RodchenkoCTT";
+  font-size: 18pt;
+  letter-spacing: 0.12em
+}
+
+.text2 {
+  width: 300px;
+  color: black;
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+  margin: -10px auto;
+  font-family: "DSEraserCyr";
+  font-size: 22pt;
+  letter-spacing: 0.12em;
+  line-height: 22px;
+}
+
+.text3 {
+  width: 300px;
+  color: black;
+  text-align: center;
+  margin: -10px auto;
+  font-family: "MPLUS1p-Regular";
+  font-size: 22pt;
+  letter-spacing: 0.08em;
+  line-height: 18pt;
+}
+
+.text_footer1 {
+  margin-top: 0;
+  margin-left: 20px;
+  background-color: #ffda00;
+  text-align: left;
+  font-size: 18pt;
+  letter-spacing: 0.06em;
+}
+
+.text_footer2 {
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: #ffda00;
+  text-align: left;
+  font-size: 12pt;
+  letter-spacing: 0.12em;
+}
+
+.text_footer3 {
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: #ffda00;
+  text-align: left;
+  font-size: 14pt;
+}
+
+.header .text0{
+  height: 110px;
+  font-family: 'MPLUS1p-Regular';
+  font-size: 14pt;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+.letter_sp08{
+  letter-spacing: 0.08em;
+}
+
+.pop_area {
+  width: 100%;
+}
+
+.button {
+  display: table;
+  background: #5c5c5c;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  transition: all 0.5s ease; /* デュレーションを設定 */
+}
+
+.button:hover{
+  background: #c7243a;
+}
+
+.or_rod {
+  color: darkgray;
+  text-align: center;
+  margin: auto;
+  line-height: 1.2;
+}
+
+#img {
+  width: 270px;
+  height: 270px;
+  background: url("../img/300px.png");
+  background-size: cover;
+  margin: 20px auto;
+}
+
+/* ポップアップの記述 以下 */
+/* ポップアップウインドウの設定 */
+.popup {
+  background-color: #fff;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80vw;
+  height: 70vw;
+/*  overflow-y: scroll; */
+}
+/* チェックボックスの初期設定＝それぞれ id での指定が必須*/
+#popup-on1,#popup-on2,#popup-on3,#popup-on4,#popup-on5,#popup-on6,#popup-on7,#popup-on8,#popup-on9 {
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on1:checked + .popup{
+  display: block;
+}
+#popup-on2:checked + .popup{
+  display: block;
+}
+#popup-on3:checked + .popup{
+  display: block;
+}
+#popup-on4:checked + .popup{
+  display: block;
+}
+#popup-on5:checked + .popup{
+  display: block;
+}
+#popup-on6:checked + .popup{
+  display: block;
+}
+#popup-on7:checked + .popup{
+  display: block;
+}
+#popup-on8:checked + .popup{
+  display: block;
+}
+#popup-on9:checked + .popup{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close{
+  background: #fff;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 4px 6px;
+  border-radius:4px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-family: '小塚ゴシック Pr6N';
+  font-size: 18pt;
+}
+
+/* 開くボタン */
+.btn-open{
+  background-color: rgb(255, 255, 255);
+/*  color: #fff; */
+/*  cursor: pointer; */
+  margin: 10px auto;
+/*  height: 80%; */
+/*  width: 80%; */
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.popup-content{
+  margin: 10px auto 10px auto;
+  width: 70%;
+}
+
+/* レイヤーイメージ */
+.layer-img {
+  width: 100%;
+  margin: -10px auto;
+}
+
+
+/*order_po_ame.htmlの記述はここから*/
+.contactForm{
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 20px;
+  border-spacing: 0;
+}
+
+
+
+
+
+
+
+/* ここから ↓ */
+/* スマホ用のサイズ指定 */
+@media only screen and (max-device-width: 768px) {
+.header {
+  height: 150px;
+  background-color:#fff;
+}
+
+.topimage_coffee {
+  width: 100%;
+  height: 150px;
+  background: url("./img/coffee_top.png");
+  background-size: cover;
+  background-position: left;
+}
+
+.topimage_tea {
+  width: 100%;
+  height: 150px;
+  background: url("./img/tea_top.png");
+  background-size: cover;
+  background-position: right;
+}
+
+.popup {
+  background-color: #fff;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;
+  height: 100%;
+}
+
+.popup-content{
+  margin: 10px auto 10px auto;
+  width: 70%;
+}
+
+.komado {
+ width: 100%;
+ height: 400px;
+ background-color: #fff;
+ color: #fff;
+ display: block;
+}
+
+/*スマホ用テキスト*/
+.tabs .rod{
+  font-size: 20pt;
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+}
+
+.tabs .ds_eraser_cyr {
+  font-family: "DSEraserCyr";
+  font-size: 18pt;
+  letter-spacing: 0.14em;
+  line-height: 2;
+}
+
+.mplus{
+  font-family: "MPLUS1p-Regular";
+  font-size: 16pt;
+  letter-spacing: 0.04em;
+  line-height: 2.2;
+}
+
+
+
+
+.text1 {
+  width: 100%;
+  color: black;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 18pt;
+  letter-spacing: 0.12em
+}
+
+.text2 {
+  width: 270px;
+  color: black;
+  background-color: #fff;
+  text-align: center;;
+  margin: 0 auto;
+  font-size: 18pt;
+  letter-spacing: 0.12em
+}
+
+.pop_area {
+  width: 100%;
+}
+
+.button {
+  display: table;
+  background: #5c5c5c;
+  color: #fff;
+  text-decoration: none;
+  width: 80%;
+  height: 30px;
+  line-height: 32px;
+  border-radius: 5px;
+}
+
+.or_rod {
+  color: darkgray;
+  text-align: center;
+  margin: auto;
+  line-height: 1;
+}
+
+.text_footer1 {
+  margin-top: -20px;
+  margin-left: 20px;
+  background-color: #ffda00;
+  text-align: left;
+  font-size: 24px;
+  text-align: 0.05em;
+  letter-spacing: 0.06em;
+}
+
+.text_footer2 {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #ffda00;
+  text-align: left;
+  font-size: 15px;
+}
+
+.letter_sp08{
+  letter-spacing: 0.08em;
+}
+
+.popup {
+  background-color: #fff;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90vw;
+  height: 110vw;
+}
+
+.popup-content{
+  margin: 10px auto 10px auto;
+  width: 90%;
+}
+
+video {
+ width: 100%;
+}
+
+
+
+
+
+
+
+
+
 }

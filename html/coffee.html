@@ -1,0 +1,322 @@
+<!--cosmos cafe menu_v2.0 = 20210516 HTML・CSS応用を終えて再度挑戦-->
+<!--一度サーバーサイドを切り離してページはページで完成させる = v2.2とする-->
+<!-- └ kocmoc-u/cosmos_cafe 内に見せるようとして作る = kocmoc_kafeは残し -->
+<!-- cosmos_cafe_menu としてファイル名変更(v.は付けない)-->
+<!-- タブの動作を直す 直す前のファイルは元として保存済み -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>cosmos-cafe-menu-coffee</title>
+
+  <meta name="description" content="ページの内容の説明を記述する箇所。100文字程度いけます。">
+  <meta name="format-derection" conrent="email=no,telephone=no,adress=no">
+  <link rel="shortcut icon" href="./img/152px.png">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="tabs">
+    <input id="coffee" type="radio" name="tab_item" checked>
+    <label class="tab_item rod" for="coffee">COFFEE</label>
+
+    <input id="tea" type="radio" name="tab_item">
+    <a href="./tea.html" class="tab_item ds_eraser_cyr" for="tea">TEA</a>
+
+    <input id="design" type="radio" name="tab_item">
+    <a href="./aboutus.html" class="tab_item mplus" for="design">ABOUT US</a>
+
+    <!-- coffee タブ -->
+    <div class="tab_content" id="coffee_content">
+      <div class="tab_content_description">
+        <!-- イメージの読み込み -->
+        <div class="header">
+          <div class="topimage_coffee"></div>
+        </div>
+        <!-- メインの大枠 -->
+        <div class="main">
+
+          <!-- 小窓 1 ポーランド-->
+          <!-- この状態でネットワークいけるか確認 -->
+          <div class="komado">
+            <div class="pop-box">
+              <label for="popup-on1">
+                <div class="btn-open"><img src="./img/coffer_poland_300.png"></div>
+              </label>
+              <input type="checkbox" id="popup-on1">
+              <div class="popup">
+                <label for="popup-on1" class="icon-close">×</label>
+                <div class="popup-content">
+                  <!-- ポップアップの中身＆コメント -->
+                  <img src="./img/coffer_poland.png" alt="" class="layer-img">
+                  <div class="pop_area">
+                    <a href="./order_pl_ame.html" class="text1 button">AMERICANO</a>
+                    <P class="text1 or_rod">OR</P>
+                    <a href="./pl_cappuccino_order.html" class="text1 button">CAPPUCCINO</a>
+                  </div>
+                </div>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              ワルシャワで買った黒いマキネッタ <br>
+              メーカーは確かイタリア製 <br>
+              安定の深い香り
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 2 ロシア-->
+        <div class="komado">
+          <div class="pop-box">
+            <label for="popup-on2">
+              <div class="btn-open"><img src="./img/coffer_russia_300.png"></div>
+            </label>
+            <input type="checkbox" id="popup-on2">
+            <div class="popup">
+              <label for="popup-on2" class="icon-close">×</label>
+              <div class="popup-content">
+                <!-- ポップアップの中身＆コメント -->
+                <img src="./img/coffer_russia.png" alt="" class="layer-img">
+                <p class="text1">
+                  AMERICANO<br>
+                  <span class="soushoku">OR</span><br>
+                  CAPPUCCINO
+                </p>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              モスクワの路上で買ったマキネッタ <br>
+              多分おそらく中国製 <br>
+              シャボ寮のコンロで慣らした深い味わい
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 3 フランス-->
+        <div class="komado">
+          <div class="pop-box">
+            <label for="popup-on3">
+              <div class="btn-open"><img src="./img/coffer_french_300.png"></div>
+            </label>
+            <input type="checkbox" id="popup-on3">
+            <div class="popup">
+              <label for="popup-on3" class="icon-close">×</label>
+              <div class="popup-content">
+                <!-- ポップアップの中身＆コメント -->
+                <img src="./img/coffer_french.png" alt="" class="layer-img">
+                <p class="text1">
+                  AMERICANO<br>
+                  <span class="soushoku">OR</span><br>
+                  CAPPUCCINO
+                </p>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              パリの蚤の市で調達した逸品 <br>
+              なのできっとフランス製 <br>
+              フォルムの美しさで味も引き立つ
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 4 アレッシィ-->
+        <div class="komado">
+          <div class="pop-box">
+            <label for="popup-on4">
+              <div class="btn-open"><img src="./img/coffer_alessi_300.png"></div>
+            </label>
+            <input type="checkbox" id="popup-on4">
+            <div class="popup">
+              <label for="popup-on4" class="icon-close">×</label>
+              <div class="popup-content">
+                <!-- ポップアップの中身＆コメント -->
+                <img src="./img/coffer_alessi.png" alt="" class="layer-img">
+                <p class="text1">
+                  AMERICANO<br>
+                  <span class="soushoku">OR</span><br>
+                  CAPPUCCINO
+                </p>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              ALESSI社製マキネッタ <br>
+              Rechard Sapper によるデザイン <br>
+              1930年代から今に続く名品
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 5 トルコ-->
+        <div class="komado">
+          <div class="pop-box">
+            <label for="popup-on5">
+              <div class="btn-open"><img src="./img/coffer_turkey_300.png"></div>
+            </label>
+            <input type="checkbox" id="popup-on5">
+            <div class="popup">
+              <label for="popup-on5" class="icon-close">×</label>
+              <div class="popup-content">
+                <!-- ポップアップの中身＆コメント -->
+                <img src="./img/coffer_turkey.png" alt="" class="layer-img">
+                <p class="text1">
+                  TURKISH COFFEE<br>
+                  <span class="soushoku">OR</span><br>
+                  WITH MILK
+                </p>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              トルコの小都市でみつけた骨董品 <br>
+              嘗てのオスマン帝国に想いを馳せつつ <br>
+              嗜む本物のトルココーヒー
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 6 ベトナム-->
+        <div class="komado">
+          <div class="pop-box">
+            <label for="popup-on6">
+              <div class="btn-open"><img src="./img/coffer_vietnam_300.png"></div>
+            </label>
+            <input type="checkbox" id="popup-on6">
+            <div class="popup">
+              <label for="popup-on6" class="icon-close">×</label>
+              <div class="popup-content">
+                <!-- ポップアップの中身＆コメント -->
+                <img src="./img/coffer_vietnam.png" alt="" class="layer-img">
+                <p class="text1">
+                  VIETNAMESE COFFEE<br>
+                  <span class="soushoku">OR</span><br>
+                  WITH CONDENSED MILK
+                </p>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              サイゴンの茶屋で買い付けたドリッパー <br>
+              文句なしのベトナム製 <br>
+              注文時に練乳の有無は要確認
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 7 ドリップ-->
+        <div class="komado">
+          <div class="pop-box">
+            <label for="popup-on7">
+              <div class="btn-open"><img src="./img/coffer_drip_300.png"></div>
+            </label>
+            <input type="checkbox" id="popup-on7">
+            <div class="popup">
+              <label for="popup-on7" class="icon-close">×</label>
+              <div class="popup-content">
+                <!-- ポップアップの中身＆コメント -->
+                <img src="./img/coffer_drip.png" alt="" class="layer-img">
+                <p class="text1">
+                  DRIP COFFEE<br>
+                  <span class="soushoku">OR</span><br>
+                  WITH MILK
+                </p>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              銅製鈴張りで仕上げたドリッパー <br>
+              安定の日本製 <br>
+              誰からも好まれる安定した味わい
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 8 トムポット-->
+        <div class="komado">
+          <div class="pop-box">
+            <div class="btn-open"><img src="./img/coffer_tom_pot_300.png"></div>
+            <input type="checkbox" id="popup-on8">
+            <div class="popup">
+              <label for="popup-on8" class="icon-close">×</label>
+              <div class="popup-content">
+                <!-- ポップアップの中身＆コメント -->
+                <img src="./img/coffer_tom_pot.png" alt="" class="layer-img">
+                <p class="text1">
+                  ICE COFFEE<br>
+                  <span class="soushoku">OR</span><br>
+                  WITH MILK
+                </p>
+                <!-- ポップアップの中身 ここまで -->
+              </div>
+            </div>
+            <!-- 説明文 -->
+            <p class="text0">
+              トムがオランダから持ち帰った銅ポット <br>
+              裏には英国製の刻印が <br>
+              お好みのコーヒーをアイスで愉しめます
+            </p>
+          </div>
+        </div>
+
+        <!-- 小窓 ロゴ 不動-->
+        <div class="komado">
+          <div id="img"></div>
+          <p class="text1 letter_sp08">
+            BEST CAFE <br>
+            IN THE UNIVERSE</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p class="text1 text_footer1">
+          <br>
+          COSMOS CAFE<br>
+          INSTAGRAM : <a href="https://www.instagram.com/kocmoc_kafe/" target="_blank">KOCMOC_KAFE</a><br>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- ↑ coffeeタブ ここで終わり -->
+
+
+  <!-- tea タブ -->
+  <div class="tab_content" id="tea_content">
+    <div class="tab_content_description">
+    </div>
+  </div>
+  <!-- ↑ tea タブ ここで終わり -->
+
+
+  <!-- ABOUT US タブ -->
+  <div class="tab_content" id="design_content">
+    <div class="tab_content_description">
+    </div>
+  </div>
+  <!-- ↑ ABOUT US タブ ここで終わり -->
+
+
+
+  <!-- IE Edge でレスポンシブに対応させる .js -->
+  <script src="js/ofi.js"></script>
+  <script>
+    objectFitImages();
+  </script>
+
+</body>
+
+</html>

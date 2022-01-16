@@ -28,32 +28,32 @@
     </div>
     <!--↓ method="post" を追加＝授業より-->
     <!-- nameタグにオーダーの名前をつけておけば、ひとつの index.js で対応可能-->
-    <!-- actionの行先がうまくいかない=ローカルホストのせい？-->
-    <form method="post" action="./thanks.html">
+    <!-- actionの行先がうまくいかない=post後のactionを消す branch-0116 -->
+    <form method="post" >
       <table class="orderForm">
         <tr>
           <td><label for="pl_cap">NAME</label></td>
-          <td><input type="text" name="pl_americano" placeholder="USER NAME"></td>
+          <td><input type="text" name="Poland" placeholder="USER NAME"></td>
         <tr>
           <td>HOT OR ICED?</td>
           <td>
-            <input type="radio" name="hotOrIced" id="hot" value="hot"><label for="hot">HOT</label>
-            <input type="radio" name="hotOrIced" id="iced" value="iced"><label for="iced">ICED</label>
+            <input type="radio" name="Americano" id="Hot" value="Hot"><label for="Hot">HOT</label>
+            <input type="radio" name="Americano" id="Iced" value="Iced"><label for="Iced">ICED</label>
           </td>
         </tr>
         </tr>
         <tr>
           <td>WITH SUGAR?</td>
           <td>
-            <input type="radio" name="sugar" id="yes-sugar" value="yes-sugar"><label for="yes-sugar">YES</label>
-            <input type="radio" name="sugar" id="no-sugar" value="no-sugar"><label for="no-sugar">NO</label>
+            <input type="radio" name="s" id="YesSugar" value="YesSugar"><label for="YesSugar">YES</label>
+            <input type="radio" name="s" id="NoSgar" value="NoSugar"><label for="NoSugar">NO</label>
           </td>
         </tr>
         <tr>
           <td>WITH MILK?</td>
           <td>
-            <input type="radio" name="milk" id="yes-milk" value="yes-milk"><label for="yes-milk">YES</label>
-            <input type="radio" name="milk" id="no-milk" value="no-milk"><label for="no-milk">NO</label>
+            <input type="radio" name="m" id="YesMilk" value="YesMilk"><label for="YesMilk">YES</label>
+            <input type="radio" name="m" id="NoMilk" value="NoMilk"><label for="NoMilk">NO</label>
           </td>
         </tr>
       </table>
