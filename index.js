@@ -13,9 +13,10 @@ const teaPage = fs.readFileSync('./html/tea.html', 'utf-8');
 const aboutUs = fs.readFileSync('./html/aboutus.html', 'utf-8');
 const thanksPage = fs.readFileSync('./html/thanks.html', 'utf-8');
 const styleOrderCss = fs.readFileSync('./html/css/style_order.css', 'utf-8');
-// ※URL直書きで行けるか確認 ← ※※
+const styleCss = fs.readFileSync('./html/css/style.css', 'utf-8');
 
-// ※クリエイトサーバ→ルート// えってぃんぐで出来るか？
+
+
 
 // createServer()関数で鯖を作成
 const server = http.createServer((req, res) => {
@@ -58,7 +59,13 @@ const server = http.createServer((req, res) => {
         res.end();
         break;
 
+      case '/css/style.css':
+        res.writeHead(200, {'Content-Type': 'text/css'});
+        res.write(styleCss);
+        res.end();
+        break;
     }
+
 
     switch (req.method) {
       case 'GET':
